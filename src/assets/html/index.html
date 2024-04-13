@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie App</title>
+    <link rel="icon" type="image/x-icon" href="./images/footer-logo.png">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons">
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav>
+      <div id="left-part">
+        <div id="logo">
+          <div class="logo-shape"></div>
+        </div>
+        <div>WDC MOVIES</div>
+        <div><a href="index.html" class="home">Home</a> </div>
+      </div>
+
+      <div id="right-part">
+        <div class="container">
+          <div class="search-bar">
+            <input type="text" id="search" class="search-input" placeholder="Search ...">
+            <span class="material-icons search-icon">search</span>
+          </div>
+          <div id="suggestions"></div>
+        </div>
+    </div>
+    
+    </nav>
+
+    <!-- Here We show the Most recent Movies -->
+    <header>
+      <div id="movie-slider">
+        <div class="active" id="first-movie"></div>
+        <div id="second-movie"></div>
+        <div id="third-movie"></div>
+      </div>
+
+      <div id="movie-details">
+        <section>
+          <div>
+            <h4>Action, Sci-Fi</h4>
+            <h2>Dune 2</h2>
+          </div>
+
+          <aside>
+            <div></div>
+            <span>4.5</span>
+          </aside>
+        </section>
+
+        <div>
+          <p>
+            American epic science fiction film directed and co-produced by Denis
+            Villeneuve, who co-wrote the screenplay with Jon Spaihts.
+          </p>
+          <div id="direction"></div>
+          <span id="watch-movie">Watch Movie</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- The main part of the page  where we will display our movies -->
+    <main>
+      <!-- There section will show you the poster and rate of each movie -->
+      <section id="posters">
+        <!-- first poster -->
+        <div>
+          <div class="poster" id="first-poster">
+            <div id="rate-platforms">
+              <div id="roten"></div>
+              <div class="shape"></div>
+              <div id="roten-rate">%97</div>
+              <div id="imdb"></div>
+              <div class="shape"></div>
+              <div id="imdb-rate">8.3</div>
+            </div>
+
+            <h2>Action, Sci-Fi</h2>
+            <button onclick="popup()">Rate</button>
+          </div>
+          <h3>INTERSTELLAR</h3>
+        </div>
+
+        <!-- second poster -->
+        <div>
+          <div class="poster" id="second-poster">
+            <div id="rate-platforms">
+              <div id="roten"></div>
+              <div class="shape"></div>
+              <div id="roten-rate">%97</div>
+              <div id="imdb"></div>
+              <div class="shape"></div>
+              <div id="imdb-rate">8.3</div>
+            </div>
+            y
+
+            <h2>Action, Sci-Fi</h2>
+            <button onclick="popup()">Rate</button>
+          </div>
+          <h3>THE CIRCLE</h3>
+        </div>
+
+        <!-- third poster -->
+        <div>
+          <div class="poster" id="third-poster">
+            <div id="rate-platforms">
+              <div id="roten"></div>
+              <div class="shape"></div>
+              <div id="roten-rate">%97</div>
+              <div id="imdb"></div>
+              <div class="shape"></div>
+              <div id="imdb-rate">8.3</div>
+            </div>
+
+            <h2>Action, Sci-Fi</h2>
+            <button onclick="popup()">Rate</button>
+          </div>
+          <h3>Beautiful Creatures</h3>
+        </div>
+
+        <!-- fourth poster -->
+        <div>
+          <div class="poster" id="fourth-poster">
+            <div id="rate-platforms">
+              <div id="roten"></div>
+              <div class="shape"></div>
+              <div id="roten-rate">%97</div>
+              <div id="imdb"></div>
+              <div class="shape"></div>
+              <div id="imdb-rate">8.3</div>
+            </div>
+
+            <h2>Action, Sci-Fi</h2>
+            <button onclick="popup()">Rate</button>
+          </div>
+          <h3>DUNE PART TWO</h3>
+        </div>
+
+        <!-- the form to submit your review -->
+        <div id="rate-form">
+          <div id="review-form-title">
+            <h2>Review Movie</h2>
+            <h4>bla bla bla</h4>
+          </div>
+
+          <div id="review-comment">
+            <h3>Review</h3>
+            <input type="text" name="" id="" placeholder="Write your review here" ></input>
+          </div>
+
+          <div id="review-stars">
+            <h4>Rate</h4>
+            <div id="form-rate-stars" class="rating">
+                <input value="1" name="rating" id="star1" type="radio">
+                <label for="star1"></label>
+                <input value="2" name="rating" id="star2" type="radio">
+                <label for="star2"></label>
+                <input value="3" name="rating" id="star3" type="radio">
+                <label for="star3"></label>
+                <input value="4" name="rating" id="star4" type="radio">
+                <label for="star4"></label>
+                <input value="5" name="rating" id="star5" type="radio">
+                <label for="star5"></label>
+              
+            </div>
+          </div>
+
+          <div id="form-rate-buttons">
+            <button id="done-review">Done</button>
+            <button id="cancel-review">Cancel</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- There we will show the review of our users -->
+      <div id="Reviews">
+        <section id="review-frame">
+          <div class="non-active-review-frame"></div>
+
+          <div class="active-review-frame">
+            <div id="review-detail">
+              <div>Review - Review - Review - Review</div>
+              <div>Review - Review - Review - Review</div>
+            </div>
+
+            <div id="reviewer">
+              <div id="user-frame">
+                <div></div>
+                <h4>Sakar Hamasaeed</h4>
+              </div>
+
+              <div class="stars">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="review-frame">
+          <div class="non-active-review-frame"></div>
+
+          <div class="active-review-frame">
+            <!--  -->
+            <div id="review-detail">
+              <div>Review - Review - Review - Review</div>
+              <div>Review - Review - Review - Review</div>
+            </div>
+
+            <div id="reviewer">
+              <div id="user-frame">
+                <div></div>
+                <h4>Sakar Hamasaeed</h4>
+              </div>
+
+              <div class="stars">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="review-frame">
+          <div class="non-active-review-frame"></div>
+
+          <div class="active-review-frame">
+            <div id="review-detail">
+              <div>Review - Review - Review - Review</div>
+              <div>Review - Review - Review - Review</div>
+            </div>
+
+            <div id="reviewer">
+              <div id="user-frame">
+                <div></div>
+                <h4>Sakar Hamasaeed</h4>
+              </div>
+
+              <div class="stars">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div id="left-footer">
+        <div id="footer-logo"></div>
+        <div>WDC MOVIES</div>
+      </div>
+
+      <div id="right-footer">WEB DEVELOPMENT CLUB - KOYA UNIVERSTY</div>
+    </footer>
+
+    <span id="blur-background"></span>
+
+    <script src="./javascript/function.js"></script>
+    <script src="./javascript/searchBar.js"></script>
+  </body>
+</html>

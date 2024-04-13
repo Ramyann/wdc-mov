@@ -1,0 +1,272 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+@import url("https://fonts.cdnfonts.com/css/euclid-circular-a");
+
+
+html {
+  height: 100%;
+  color: white;
+  overflow: visible;
+}
+
+body {
+  display: grid;
+  font-family: "Euclid Circular A", sans-serif;
+  width: 100%;
+  padding-top:95px;
+  margin: 0;
+  row-gap: 44px;
+  background-color: #131722;
+
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  padding: 20px;
+  font-family: Euclid Circular A;
+  background-color: #060A10;
+  position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+    margin-bottom: 20px;
+  
+}
+
+#logo {
+  background-image: url(../images/Vector.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 123px;
+  height: 31px;
+  text-align: right;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+#left-part {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  column-gap: 20px;
+  position: relative;
+  right: -50px;
+}
+
+#right-part{
+     margin-right: 50px;
+}
+
+footer {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 42px;
+  width: 1216px;
+  font-family: Euclid Circular A;
+}
+
+#footer-logo {
+  background-image: url(../images/footer-logo.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 29px;
+  height: 31px;
+}
+
+#left-footer {
+  display: flex;
+  justify-content: space-evenly;
+  column-gap: 10px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+#right-footer {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+#movieDetails{
+  display: flex;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 6px solid rgba(0, 0, 0, 0.1);
+      background-color: #131722;
+     
+      width: 1500px;
+      height: 700px;
+      margin: 0 auto;
+      margin-top: 40px;
+      margin-bottom: 40px;
+}
+#moviePoster{
+  width: 450px;
+      height: auto;
+      object-fit: cover;
+}
+#movieInfo{
+  padding: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-grow: 1;
+  
+  #movieTitle{
+    margin-right: 5px;
+  }
+}
+#TitYear{
+  display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+}
+
+#movieTitle,
+    #movieReleaseYear {
+      margin: 0;
+      font-size: 42px;
+      color: #ffffff;
+    }
+    
+#movieRating{
+  display: inline-block;
+      background-color: #ffc107;
+      color: #333;
+      padding: 15px 30px;
+      border-radius: 5px;
+      margin-bottom: 30px;
+      font-size: 30px;
+      font-weight: bold;
+}
+
+#movieGenres,
+    #movieRuntime {
+      display: inline-block;
+      margin-right: 30px;
+      font-size: 30px;
+    }
+
+#movieSynopsis{
+  font-style: italic;
+      color: #ffffff;
+      margin-top: 30px;
+      font-size: 24px;
+}
+/* .checked{
+  color: rgb(32, 50, 247);
+  font-size: 30px;
+  margin-right: 440px ;
+  margin-top: -26px;
+} */
+
+
+.synopsis{
+  font-size: 20px;
+  line-height: 30px;
+  margin-left: 5px;
+}
+
+.home{
+  color: white;
+  font-size: 17px;
+ text-decoration: none;
+ font-family: "Euclid Circular A", sans-serif;
+}
+
+.container {
+  position: relative;
+  max-width: 400px;
+  margin-left: 500px;
+  margin-bottom: 5px;
+  background-color: #d8d8d8;
+  border-radius: 19px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar {
+  padding: 10px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  background-color: #101112;
+  border-radius: 19px;
+  
+}
+
+.search-input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  font-size: 16px;
+  outline: none;
+  margin-left: 25px;
+  background-color: #101112;
+ text-align: left;
+ color: #b8b5b5;
+}
+
+::placeholder {
+  color: #b8b5b5;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  font-size: 22px;
+  color: #b8b5b5;
+  cursor: pointer;
+}
+
+#suggestions {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+  max-height: 300px;
+  overflow-y: auto;
+  display: none;
+  position: absolute;
+border-radius: 10px;
+}
+
+.suggestion {
+  display: flex;
+  padding: 5px;
+  cursor: pointer;
+  border-bottom: 1px solid #ccc;
+}
+
+.suggestion:last-child {
+  border-bottom: none;
+}
+
+.suggestion:hover {
+  background-color: #d6d5d5;
+}
+
+.suggestion img {
+  width: 50px;
+  height: 75px;
+  margin-right: 10px;
+}
+.suggestion p {
+  margin: 0;
+  color: rgb(0, 0, 0);
+}
