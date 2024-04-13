@@ -7,7 +7,7 @@ import { Grid } from "@mui/material";
 import "../assets/css/Movie.css";
 import { Link } from "react-router-dom";
 import Nav from "./nav";
-import Footer from "../components/footer"
+import Footer from "../components/footer";
 import { setDoc } from "firebase/firestore";
 
 const Movies = () => {
@@ -26,14 +26,13 @@ const Movies = () => {
     getMovie();
   }, []);
 
-  const addMovie = async () =>{
-
-    try{
-        await setDoc()
-    }catch(error){
-      console.log(error)
+  const addMovie = async () => {
+    try {
+      await setDoc();
+    } catch (error) {
+      console.log(error);
     }
-  }
+  };
 
   console.log(movieList);
 
@@ -50,7 +49,7 @@ const Movies = () => {
         {movieList.map((movie) => {
           return (
             <Grid item xs={1.5}>
-              <Link to={"/movie-details"} state={{movie:movie}}>
+              <Link to={"/movie-details"} state={{ movie: movie }}>
                 <Box>
                   <Card>
                     <CardContent>
